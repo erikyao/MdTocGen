@@ -38,13 +38,12 @@ public class CodeDetectorTest {
 	public void test() throws IOException {
 		StringReader sr = new StringReader(text);
 		BufferedReader br = new BufferedReader(sr);
-		CodeDetector cd = new CodeDetector();
 		
 		List<Boolean> result = new ArrayList<Boolean>();
 		
 		String line = null;
 		while((line = br.readLine()) != null) {
-			result.add(cd.isCode(line));
+			result.add(CodeDetector.isCode(line));
 		}
 		
 		// System.out.println(result);

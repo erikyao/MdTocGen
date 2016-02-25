@@ -6,13 +6,13 @@ public class CodeDetector {
 	private static final String CODE_START = "<pre class=\"prettyprint linenums\">";
 	private static final String CODE_END = "</pre>";
 	
-	private boolean isCode = false;
+	private static boolean isCode = false;
 
-	public boolean isCode() {
+	public static boolean isCode() {
 		return isCode;
 	}
 	
-	public boolean isCode(String line) {
+	public static boolean isCode(String line) {
 		if (isCode == false) {
 			if (line.startsWith(CODE_START)) {
 				isCode = true;
